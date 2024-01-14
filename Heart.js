@@ -144,7 +144,7 @@ const getRandomImage = (directory) => {
 const imageDirectory = './Gallery/Theme-logo';
   const randomImage = getRandomImage(imageDirectory);
 
-//group chat msg by Ayush
+//group chat msg by Bealth
 const reply = (teks) => {
 Maria.sendMessage(m.chat,
 { text: teks,
@@ -213,7 +213,7 @@ await Maria.sendMessage(from, {text: Ayushlod[i], edit: key });
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey, future fahm! 🌟 Wave-Md is here to inspire and lead, thanks to Bealth Guy. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
+            Maria.updateProfileStatus(`{Wave-MD} by Bealth Guy. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
             return Maria.updateBlockStatus(m.sender, 'block')
@@ -335,7 +335,7 @@ if (smallinput.includes(`afternoon`)) {
 
         if (smallinput.includes(`Night`)) {
 
-                  reply(`good night 😽😽${pushname}', sweetdreams💜💜`)
+                  reply(`good night ${pushname}', sweetdreams💜💜`)
 
                   }
 
@@ -404,7 +404,7 @@ if (smallinput.includes(`afternoon`)) {
 
 
 
-                  reply(`good night 😽😽${pushname}', sweetdreams💜💜`)
+                  reply(`good night ${pushname}', sweetdreams💜💜`)
 
                   }
 
@@ -444,13 +444,13 @@ if (smallinput.includes(`afternoon`)) {
 
 		if (smallinput.includes(`Thanks`)) {
 
-                  reply(`welcome😽😽 ${pushname}`)
+                  reply(`welcome ${pushname}`)
 
                   }
                   
                   if (smallinput.includes(`thanks`)) {
 
-                  reply(`no problem😽😽 ${pushname}`)
+                  reply(`no problem ${pushname}`)
 
                   }
                   
@@ -490,7 +490,7 @@ if (smallinput.includes(`thank you`)) {
 
 		if (smallinput.includes(`Thank you`)) {
 
-                  reply(`u r welcome my frnd😽😽 ${pushname}`)
+                  reply(`u r welcome my frnd ${pushname}`)
 
                   }
 
@@ -1764,7 +1764,7 @@ case 'truth':
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
 │⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: Wave-MD
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  ${prefix}
-│⋊ 𝕆𝕨𝕟𝕖𝕣: ${prefix}owner
+│⋊ 𝕆𝕨𝕟𝕖𝕣: Bealth Guy 🎭
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/BrQNE6Xas4yKtJqEI3R2A5
 ╰────────────┈平和
 Here's the list of my Commands.🔖
