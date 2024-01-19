@@ -1478,7 +1478,7 @@ https://chat.whatsapp.com/BrQNE6Xas4yKtJqEI3R2A5`
 *🚦Uptime:* ${runtime(process.uptime())}
 *🕸Version:* 1.2.0
 *👤Creator:*  Bealth Guy\n
-*Powered by Bealth Guy`*
+*Powered by _Bealth Guy_`*
 Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1762,9 +1762,9 @@ case 'truth':
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *Bealth-Wave* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: Wave-MD
+│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *_Wave-MD_*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  ${prefix}
-│⋊ 𝕆𝕨𝕟𝕖𝕣: Bealth Guy 🎭
+│⋊ 𝕆𝕨𝕟𝕖𝕣: *_Bealth Guy 🎭_*
 │⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://chat.whatsapp.com/BrQNE6Xas4yKtJqEI3R2A5
 ╰────────────┈平和
 Here's the list of my Commands.🔖
@@ -1867,11 +1867,7 @@ ${readmore}
 │⊳ 🏮 ${prefix}pinterest
 │⊳ 🏮 ${prefix}dalle
 │⊳ 🏮 ${prefix}gpt
-└──────────⊰
-🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
-
-🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu*`
-
+└──────────⊰`
   if (randomImage) {
     Maria.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
   }
