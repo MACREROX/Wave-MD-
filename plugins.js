@@ -24,7 +24,7 @@ const store = makeInMemoryStore({
     })
 })
 
-let phoneNumber = "919931122319"
+let phoneNumber = "254745247106"
 let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
@@ -72,18 +72,18 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +919931122319")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +254745247106")))
             process.exit(0)
          }
       } else {
-         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number\nFor example: +919931122319 : `)))
+         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number\nFor example: +254745247106: `)))
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +919931122319")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +254745247106")))
 
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number please\nFor example: +919931122319: `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number please\nFor example: +254745247106: `)))
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
             rl.close()
          }
@@ -92,7 +92,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
       setTimeout(async () => {
          let code = await Maria.requestPairingCode(phoneNumber)
          code = code?.match(/.{1,4}/g)?.join("-") || code
-         console.log(chalk.black(chalk.bgGreen(`🤖Your Pairing Code🤖: `)), chalk.black(chalk.white(code)))
+         console.log(chalk.black(chalk.bgGreen(`Your Pairing Code: `)), chalk.black(chalk.white(code)))
       }, 3000)
    }
 
@@ -170,9 +170,9 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 Maria.ev.on("connection.update",async  (s) => {
         const { connection, lastDisconnect } = s
         if (connection == "open") {
-console.log(chalk.green('🟨Welcome to Maria-md'));
-console.log(chalk.gray('\n\n🚀Initializing...'));
-console.log(chalk.cyan('\n\n🧩Connected'));
+console.log(chalk.green('Wave-MD'));
+console.log(chalk.gray('Initializing...'));
+console.log(chalk.cyan('\n\nConnected'));
 
 
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
@@ -180,7 +180,7 @@ let index = 0;
 
 function printRainbowMessage() {
   const color = rainbowColors[index];
-  console.log(chalk.keyword(color)('\n\n⏳️waiting for messages'));
+  console.log(chalk.keyword(color)('......waiting for messages'));
   index = (index + 1) % rainbowColors.length;
   setTimeout(printRainbowMessage, 60000);  // Adjust the timeout for desired speed
 }
@@ -296,7 +296,7 @@ MariaLft = await getBuffer(ppuser)
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
                     const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                     const xmembers = metadata.participants.length
-                Mariabody = `┌──⊰ 🎗𝑾𝑬𝑳𝑳𝑪𝑶𝑴𝑬🎗⊰
+                Mariabody = `┌──⊰𝑾𝑬𝑳𝑳𝑪𝑶𝑴𝑬⊰
 │⊳  🌐 To: ${metadata.subject}
 │⊳  📋 Name: @${MariaName.split("@")[0]}
 │⊳  👥 Members: ${xmembers}th
@@ -321,7 +321,7 @@ Maria.sendMessage(anu.id,
                         const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                         let MariaName = num
                     const Mariamembers = metadata.participants.length
-  Mariabody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
+  Mariabody = `┌──⊰𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳⊰
 │⊳  👤 From: ${metadata.subject}
 │⊳  📃 Reason: Left
 │⊳  📔 Name: @${MariaName.split("@")[0]}
