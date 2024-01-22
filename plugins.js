@@ -24,7 +24,7 @@ const store = makeInMemoryStore({
     })
 })
 
-let phoneNumber = "254745247106"
+let phoneNumber = "919931122319"
 let owner = JSON.parse(fs.readFileSync('./Gallery/database/owner.json'))
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
@@ -32,7 +32,7 @@ const useMobile = process.argv.includes("--mobile")
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (text) => new Promise((resolve) => rl.question(text, resolve))
-         
+
 async function startMaria() {
 //------------------------------------------------------
 let { version, isLatest } = await fetchLatestBaileysVersion()
@@ -59,7 +59,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
       msgRetryCounterCache, // Resolve waiting messages
       defaultQueryTimeoutMs: undefined, // for this issues https://github.com/WhiskeySockets/Baileys/issues/276
    })
-   
+
    store.bind(Maria.ev)
 
     // login use pairing code
@@ -76,12 +76,12 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             process.exit(0)
          }
       } else {
-         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number\nFor example: 254745247106: `)))
+         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number\nFor example: +919931122319 : `)))
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : 254745247106")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +919931122319")))
 
             phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Your WhatsApp bot number please\nFor example: +919931122319: `)))
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
@@ -116,7 +116,17 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
         }
     })
 
-   
+   Maria.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+        let list = []
+        for (let i of kon) {
+            list.push({
+                    displayName: await Maria.getName(i + '@s.whatsapp.net'),
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Maria.getName(i + '@s.whatsapp.net')}\nFN:${await Maria.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:okeae2410@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://instagram.com/cak_haho\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+            })
+        }
+        Maria.sendMessage(jid, { contacts: { displayName: global.ownername, contacts: list }, ...opts }, { quoted })
+    }
+
     Maria.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
@@ -152,7 +162,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             (store.contacts[id] || {})
         return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
-    
+
     Maria.public = true
 
     Maria.serializeM = (m) => smsg(Maria, m, store)
@@ -160,7 +170,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 Maria.ev.on("connection.update",async  (s) => {
         const { connection, lastDisconnect } = s
         if (connection == "open") {
-console.log(chalk.green('🟨Welcome to Wave-MD'));
+console.log(chalk.green('🟨Welcome to Maria-md'));
 console.log(chalk.gray('\n\n🚀Initializing...'));
 console.log(chalk.cyan('\n\n🧩Connected'));
 
@@ -177,8 +187,8 @@ function printRainbowMessage() {
 
 printRainbowMessage();
 }
-    
-        
+
+
                 if (
             connection === "close" &&
             lastDisconnect &&
@@ -278,12 +288,14 @@ ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 memb = metadata.participants.length
 MariaWlcm = await getBuffer(ppuser)
 MariaLft = await getBuffer(ppuser)
+
                 if (anu.action == 'add') {
+                if (!global.welcome) return;        
                 const Mariabuffer = await getBuffer(ppuser)
                 let MariaName = num
                 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-	            const xmembers = metadata.participants.length
+                    const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                    const xmembers = metadata.participants.length
                 Mariabody = `┌──⊰ 🎗𝑾𝑬𝑳𝑳𝑪𝑶𝑴𝑬🎗⊰
 │⊳  🌐 To: ${metadata.subject}
 │⊳  📋 Name: @${MariaName.split("@")[0]}
@@ -304,10 +316,10 @@ Maria.sendMessage(anu.id,
 "thumbnail": MariaWlcm,
 "sourceUrl": `${link}`}}})
                 } else if (anu.action == 'remove') {
-                	const Mariabuffer = await getBuffer(ppuser)
+                        const Mariabuffer = await getBuffer(ppuser)
                     const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
-	                const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
-                	let MariaName = num
+                        const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                        let MariaName = num
                     const Mariamembers = metadata.participants.length
   Mariabody = `┌──⊰🍁𝑭𝑨𝑹𝑬𝑾𝑬𝑳𝑳🍁⊰
 │⊳  👤 From: ${metadata.subject}
@@ -333,8 +345,8 @@ Maria.sendMessage(anu.id,
 "sourceUrl": `${link}`}}})
 } else if (anu.action == 'promote') {
 const Mariabuffer = await getBuffer(ppuser)
-const Mariatime = moment.tz('Africa/Nairobi').format('HH:mm:ss')
-const Mariadate = moment.tz('Africa/Nairobi').format('DD/MM/YYYY')
+const Mariatime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+const Mariadate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 let MariaName = num
 Mariabody = ` 𝗖𝗼𝗻𝗴𝗿𝗮𝘁𝘀🎉 @${MariaName.split("@")[0]}, you have been *promoted* to *admin* 🥳`
    Maria.sendMessage(anu.id,
