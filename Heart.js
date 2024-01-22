@@ -879,7 +879,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/Kye6012/Wave-MD");
                                 case 'sticker':
             case 'stiker':
             case 's': {
-                if (!quoted) return reply(`Reply to Video/Image With Caption ${prefix + command}`)
+                if (!quoted) return reply(`Send/Reply to Video/Image With Caption ${prefix + command}`)
                 if (/image/.test(mime)) {
                     let media = await quoted.download()
                     let encmedia = await Maria.sendImageAsSticker(m.chat, media, m, {
