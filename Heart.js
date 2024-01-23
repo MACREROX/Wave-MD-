@@ -1686,7 +1686,7 @@ ${readmore}
 │⊳${prefix}dalle
 │⊳${prefix}gpt
 |⊳${prefix}searchnumber
-└──────────⊰
+└──────────⊰`
 
 
   if (randomImage) {
@@ -1700,7 +1700,7 @@ try {
 const Mariabaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Maria.waUploadToServer })
 await Maria.relayMessage(from, { ptvMessage: { ...Mariabaileys.videoMessage } }, {})
 } catch (err) {
-reply(`Reply to a Video with Caption ${prefix + command}`)
+reply(`Send/Reply to a Video with Caption ${prefix + command}`)
 }
 }
 break
