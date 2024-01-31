@@ -13,6 +13,7 @@
   "author": "Bealth Guy",
   "license": "GPL-3.0",
   "dependencies": {
+    "object-query-string": "^1.0.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@hapi/boom": "^10.0.1",
     "@whiskeysockets/baileys": "^6.5.0",
