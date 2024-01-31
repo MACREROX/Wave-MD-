@@ -2,7 +2,7 @@
 <h1 align="center">Wave-MD<br></h1>
 
 <p align="center"> 
-  Hello, I am "Wave md" a WhatsApp bot made by Kyle6012 and Bealth Guy to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  Hello, I am "Wave md" a WhatsApp bot based on Maria-Md made by Bealth Guy.
 </p>
 </br>
 
