@@ -8,11 +8,11 @@ global.ytname = "YT: Bealth.inc"
 global.socialm = "GitHub: Kyle6012"
 global.location = "Kenyan"
 
-global.ownername = 'Kyle Meshack' //owner name
+global.ownername = 'Bealth Guy (Kyle Meshack Bahati)' //owner name
 global.botname = 'WAVE-𝐌𝐃' //name of the bot
 
 //sticker details
-global.stickername = 'Bealth-Wave Company_✰'
+global.stickername = 'Bealth-Wave inc_✰'
 global.packname = 'Sticker By'
 global.author = 'Bealth Guy'
 //console view/theme
