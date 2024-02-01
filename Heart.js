@@ -1145,7 +1145,7 @@ break
             break
 
 case 'play':  case 'song': {
-Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
+Maria.sendMessage(from, { react: { text: "🦾", key: m.key }}) 
 if (!text) return reply(`Example : ${prefix + command} anime whatsapp status`)
 const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
 let yts = require("youtube-yts")
@@ -1262,8 +1262,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
       case "support":
      
         let tex = `📍Welcome to My Developer's Hub!📍
-
-https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
+https://chat.whatsapp.com/BrQNE6Xas4yKtJqEI3R2A5`
 
         await Maria.sendMessage(m.sender,{ image: {url: "./Gallery/sup.jpg"}, caption: `${tex}` },);
 
@@ -1274,10 +1273,10 @@ https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
             Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
         let ifx = `🌟『Bealth-Wave』🌟
 *🌟Description:* A WhatsApp Bot With Rich  features based on Baileys
-*👤Creator:*  Bealth Guy
-*🕸Version:* 1.2.0
+*👤Creator:*  *_Bealth Guy_*
+*🕸Version:* *1.2.0*
 *🚦Uptime:* ${runtime(process.uptime())}\n
-*Powered by Bealth Guy*`
+*Powered* by *_Bealth Guy_*`
 Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1561,11 +1560,11 @@ case 'truth':
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *Bealth-Wave* 」
 │⋊ 𝕌𝕤𝕖𝕣: *${pushname}* 
-│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: Wave-MD
+│⋊ 𝕓𝕠𝕥 ℕ𝕒𝕞𝕖: *Wave-MD*
 │⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  [ *${prefix}* ]
 │⋊ 𝕆𝕨𝕟𝕖𝕣: *~Bealth Guy~*
 │
-╰────────────┈平和
+╰────────────┈
 Here's the list of my Commands.
 ${readmore}
 ┌──⊰ ~_*GENERAL*_~
@@ -1664,7 +1663,7 @@ ${readmore}
 │⊳${prefix}narutobanner
 │⊳${prefix}shinetext
 └──────────⊰
-┌──⊰ _*⛩️OTHERS⛩️*_
+┌──⊰ ~_*OTHERS*_~
 │⊳${prefix}sticker
 │⊳${prefix}qc
 │⊳${prefix}smeme
@@ -1685,7 +1684,7 @@ ${readmore}
 │⊳${prefix}pinterest
 │⊳${prefix}dalle
 │⊳${prefix}gpt
-|⊳${prefix}searchnumber
+ |⊳${prefix}searchnumber
 └──────────⊰`
 
 
