@@ -22,7 +22,7 @@ let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
-global.modnumber = '254745247106' 
+global.modnumber = '59162208242' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
